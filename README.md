@@ -7,7 +7,7 @@
   Inventory Tracker App
 </h1>
 
-### <p align="center"> ReactJS app challenge for Code the Dream organization <a href="https://josymardeleon.com">https://josymardeleon.com</a> </p>
+### <p align="center"> ReactJS app challenge for Code the Dream organization <a href="inventory-tracker-7qn6n4njx-jossydeleon.vercel.app">inventory-tracker-7qn6n4njx-jossydeleon.vercel.app</a> </p>
 
 ## About project
 
