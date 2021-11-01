@@ -18,16 +18,16 @@ import { ICredentials } from "../types";
 import { PATTERN_EMAIL } from "../constants/validations";
 
 const defaultValues = {
-  email: "johnsmith@inventory.com",
-  password: "123456",
+  email: "",
+  password: "",
 };
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   textLogo: {
     textAlign: "center",
     color: "black",
   },
-}));
+});
 
 const Login: React.FC = () => {
   //Style
@@ -55,8 +55,12 @@ const Login: React.FC = () => {
   const handleSubmitLogin = async (data: ICredentials) => {
     try {
       await login(data);
-    } catch (error) {
-      toast.error(`${error}`);
+    } catch (error: any) {
+      if (error.code === "auth/user-not-found") {
+        toast.error(`Wrong user or password`);
+      } else {
+        toast.error("There was a problem trying to authenticate");
+      }
     }
   };
 

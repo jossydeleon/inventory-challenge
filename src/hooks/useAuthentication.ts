@@ -78,8 +78,7 @@ const useAuthentication = () => {
       dispatch(actionSetSigningInLoading(true));
       await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
-      alert(error);
-      console.log("Error signing in: " + error);
+      throw error;
     } finally {
       dispatch(actionSetSigningInLoading(false));
     }
