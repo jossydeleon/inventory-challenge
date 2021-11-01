@@ -1,0 +1,8 @@
+### Post
+POST https://fncapi.vercel.app/api/mailer HTTP/1.1
+content-type: application/json
+
+{
+    "product": "Fruit",
+    "email": "jossydeleon@gmail.com"
+}

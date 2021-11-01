@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+$primary-color: rgb(184, 128, 67);
+
+.jdl-login-root {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background: #ededed;
+  //background: rgb(235, 223, 236);
+}
+
+.jdl-login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
