@@ -1,8 +1,8 @@
 ### Post
-POST https://fncapi.vercel.app/api/mailer HTTP/1.1
+POST https://nodemailer-express-app.herokuapp.com/mail-tracker HTTP/1.1
 content-type: application/json
 
 {
-    "product": "Fruit",
+    "product": "Bananas",
     "email": "jossydeleon@gmail.com"
 }

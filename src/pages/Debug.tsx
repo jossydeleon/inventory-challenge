@@ -76,7 +76,7 @@ const Debug: React.FC = () => {
         },
         data.email
       );
-      toast.success(`Email has been set successfully`);
+      toast.success(`Email has been sent successfully`);
     } catch (error) {
       toast.error(`Something happend: ` + error);
       console.log(error);

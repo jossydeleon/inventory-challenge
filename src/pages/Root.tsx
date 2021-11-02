@@ -14,10 +14,8 @@ import { RootStore } from "../state/Store";
 import Products from "./Products";
 import Shop from "./Shop";
 import Settings from "./Settings";
-import Debug from "./Debug";
 import { actionSetProducts } from "../state/actions/DatabaseActions";
 import {
-  FaBug,
   FaDoorOpen,
   FaList,
   FaShoppingBag,
@@ -117,13 +115,13 @@ const Root: React.FC = () => {
       icon: <FaTools size={"1.5em"} color="white" />,
       component: Settings,
     },
-    {
-      name: "Debug",
-      path: `${url}debug`,
-      exact: true,
-      icon: <FaBug size={"1.5em"} color="white" />,
-      component: Debug,
-    },
+    // {
+    //   name: "Debug",
+    //   path: `${url}debug`,
+    //   exact: true,
+    //   icon: <FaBug size={"1.5em"} color="white" />,
+    //   component: Debug,
+    // },
   ];
 
   /**

@@ -26,7 +26,7 @@ End user must be capable of:
 - React Hooks
 - Firebase (database and authentication)
 - MaterialUI (User interface)
-- Axios (to communicate with external server. I am using a small api that I created for another project to send emails)
+- Axios (to communicate with email backend: https://github.com/jossydeleon/nodemailer-express-app)
 - React-hook-form (Form Validation Api)
 
 ## Login credentials
@@ -48,7 +48,8 @@ In order to receive notifications when products hits zero:
 
 ### Note
 
-You need to check Spam folder in your email in case notification is not received in inbox folder.
+- Emails will take time to arrive since the backend is hosted in Heroku free version account.
+- You need to check Spam folder in your email in case notification is not received in inbox folder.
 
 ## Run it locally
 
@@ -63,6 +64,7 @@ REACT_APP_FIREBASE_PROJECT_ID =
 REACT_APP_FIREBASE_STORAGE_BUCKET =
 REACT_APP_FIREBASE_MESSAGING_SENDER =
 REACT_APP_FIREBASE_APP_ID =
+REACT_APP_MAIL_SERVER =
 ```
 
 3. Then, start the development server:

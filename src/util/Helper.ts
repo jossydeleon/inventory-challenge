@@ -1,6 +1,8 @@
 import axios from "axios";
 import { IProduct } from "../types";
 
+const API = process.env.REACT_APP_MAIL_SERVER;
+
 /**
  * Add 2 decimals to number
  * @param value number
@@ -17,12 +19,10 @@ export function convertToCurrency(value: number) {
  */
 export async function sendEmailReport(product: IProduct, email: string) {
   try {
-    const result = await axios.post("https://fncapi.vercel.app/api/mailer", {
+    await axios.post(`${API}`, {
       product: product.name,
       email,
     });
-
-    console.log(JSON.stringify(result));
   } catch (error) {
     throw error;
   }
