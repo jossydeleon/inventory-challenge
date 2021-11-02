@@ -305,7 +305,7 @@ const Products: React.FC = () => {
       </Grid>
 
       {/** Dialog to create product */}
-      {openModalProduct && (
+      {openModalProduct && selectedProduct && (
         <ProductModal
           open={openModalProduct}
           data={selectedProduct}

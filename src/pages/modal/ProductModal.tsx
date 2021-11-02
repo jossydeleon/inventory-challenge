@@ -241,7 +241,7 @@ const ProductModal: React.FC<ModalProps> = ({
                         message: "Only digits are allow",
                       },
                     }}
-                    render={({ field: { onChange, value } }) => (
+                    render={({ field: { value } }) => (
                       <NumberFormat
                         id="stock"
                         variant="outlined"
@@ -254,9 +254,11 @@ const ProductModal: React.FC<ModalProps> = ({
                         decimalScale={0}
                         customInput={TextField}
                         onValueChange={(values) => {
-                          const { value, floatValue } = values;
+                          const { floatValue } = values;
                           if (floatValue) {
                             setValue("stock", floatValue);
+                          } else {
+                            setValue("stock", 0);
                           }
                         }}
                         disabled={formDisabled}
@@ -275,7 +277,7 @@ const ProductModal: React.FC<ModalProps> = ({
                         message: "Price is required",
                       },
                     }}
-                    render={({ field: { onChange, value } }) => (
+                    render={({ field: { value } }) => (
                       <NumberFormat
                         id="price"
                         variant="outlined"
@@ -290,9 +292,11 @@ const ProductModal: React.FC<ModalProps> = ({
                         prefix="$"
                         customInput={TextField}
                         onValueChange={(values) => {
-                          const { value, floatValue } = values;
+                          const { floatValue } = values;
                           if (floatValue) {
                             setValue("price", floatValue);
+                          } else {
+                            setValue("price", 0);
                           }
                         }}
                         disabled={formDisabled}
