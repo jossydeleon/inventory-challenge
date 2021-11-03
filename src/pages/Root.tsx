@@ -45,8 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const drawerWidth = 400;
-const container = window !== undefined ? () => window.document.body : undefined;
+const drawerWidth = 290;
 
 const Root: React.FC = () => {
   //Hook style
@@ -164,7 +163,7 @@ const Root: React.FC = () => {
   const DrawerHeader = () => (
     <div className={classes.drawerHeader}>
       <FlexVertical>
-        <Logo type="drawer" align="center" width={150} />
+        <Logo type="drawer" align="center" width={110} />
 
         <IconButton>
           <Avatar
@@ -232,7 +231,6 @@ const Root: React.FC = () => {
     <div>
       <DrawerComponent
         drawerWidth={drawerWidth}
-        container={container}
         progress={loadingProducts || processingBuy}
         menuComponent={<DrawerMenu menu={drawerMenu} />}
         headerComponent={<DrawerHeader />}

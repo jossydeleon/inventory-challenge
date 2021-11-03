@@ -37,7 +37,7 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({ menu }) => {
               button
               component={Link}
               to={item.path}
-              selected={activeRoute(item.path)}
+              //selected={activeRoute(item.path)}
             >
               <ListItemIcon>{item.icon}</ListItemIcon>
               <ListItemText

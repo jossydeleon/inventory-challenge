@@ -13,7 +13,6 @@ interface DrawerProps {
   showToolbar: boolean;
   toolbarLeftComponent?: React.FunctionComponent | JSX.Element;
   toolbarRigthComponent?: React.FunctionComponent | JSX.Element;
-  container: any;
 }
 
 const useStyles = makeStyles<Theme, DrawerProps>((theme: Theme) => ({
@@ -51,7 +50,6 @@ const DrawerComponent: React.FC<DrawerProps> = (props) => {
     showToolbar,
     toolbarLeftComponent,
     toolbarRigthComponent,
-    container,
     drawerWidth,
   } = props;
 
@@ -64,10 +62,23 @@ const DrawerComponent: React.FC<DrawerProps> = (props) => {
     setMobileOpen(!mobileOpen);
   };
 
+  const handleAutocloseForMobile = () => {
+    if (mobileOpen) {
+      handleDrawerToggle();
+    }
+  };
+
   const DrawerContent = () => (
     <div style={{ padding: 10 }}>
       {headerComponent && headerComponent}
-      {menuComponent && menuComponent}
+      {menuComponent && (
+        <div
+          onClick={handleAutocloseForMobile}
+          onKeyDown={handleAutocloseForMobile}
+        >
+          {menuComponent}
+        </div>
+      )}
     </div>
   );
 
@@ -88,7 +99,6 @@ const DrawerComponent: React.FC<DrawerProps> = (props) => {
           {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
           <Hidden smUp implementation="css">
             <Drawer
-              container={container}
               variant="temporary"
               anchor={theme.direction === "rtl" ? "right" : "left"}
               open={mobileOpen}
