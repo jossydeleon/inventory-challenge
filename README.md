@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://platinumsteel.netlify.app">
+  <a href="https://myinventorytracker.vercel.app">
     <img alt="JdL" src="public/favicon.png" width="200" />
   </a>
 </p>
@@ -7,7 +7,7 @@
   Inventory Tracker App
 </h1>
 
-### <p align="center"> ReactJS app challenge for Code the Dream organization <a href="inventory-tracker-7qn6n4njx-jossydeleon.vercel.app">inventory-tracker-7qn6n4njx-jossydeleon.vercel.app</a> </p>
+### <p align="center"> ReactJS app challenge for Code the Dream organization <a href="https://myinventorytracker.vercel.app"> </a>https://myinventorytracker.vercel.app</p>
 
 ## About project
 
